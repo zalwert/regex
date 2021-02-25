@@ -26,11 +26,9 @@ print(all_numbers)
 
 # Example 4:
 example_string4 = "She is extremely intelligent and she have a lovely voice - her name Molyna"
-pattern_one = r"\w+ly\b"
-for m in re.finditer(pattern_one, example_string4):
-    print('%02d-%02d: %s' % (m.start(), m.end(), m.group(0)))
+pattern = r"\w+ly\b"
+for m in re.finditer(pattern, example_string4):
+    print(f'{m.start():02d}-{m.end():02d} {m.group(0):s}')
 
 # Example 5:
-
-
 re.split(r'\W+', '1word, 2word, third&word. | word#@word')
